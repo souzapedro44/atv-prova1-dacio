@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PROVA 1</title>
+</head>
+<body>
+    <section>
+        <h1>Informações sobre a Copa do Mundo</h1>
+    </section>
+
+    <section>
+        <nav>
+            <a href="#org">🌍 Organização e Sedes</a>
+            <a href="#new">⚽ Novo Formato</a>
+            <a href="#exp">🏆 Expectativas e Impacto</a>
+        </nav>
+    </section>
+    
+    <section id="org">
+        <h2>🌍 Organização e Sedes</h2>
+        <p>A Copa do Mundo FIFA de 2026 será a primeira edição realizada em três países: Estados Unidos, Canadá e México. Essa será também a<br> maior Copa da história em número de cidades-sede, com partidas distribuídas por diversas regiões da América do Norte, ampliando o<br> alcance global do torneio.</p>
+    </section>
+
+    <section id="new">
+        <h2>⚽ Novo Formato</h2>
+        <p>O torneio contará com 48 seleções, em vez das tradicionais 32. As equipes serão divididas em grupos, aumentando o número total de<br> jogos e dando mais oportunidades para países de diferentes continentes participarem. Essa mudança foi promovida pela FIFA para<br> tornar a competição mais inclusiva e competitiva.</p>
+    </section>
+
+    <section id="exp">
+        <h2>🏆 Expectativas e Impacto</h2>
+        <p>A edição de 2026 promete ser uma das mais assistidas da história, com grande impacto econômico e cultural nos países-sede. Além<br> disso, seleções tradicionais e emergentes devem protagonizar jogos de alto nível, aumentando ainda mais o interesse global pelo<br> futebol e fortalecendo o esporte em novas regiões.</p>
+    </section>
+
+    <img id="tabela" src="tabela.png" style="display: none;">
+    <button onclick="MostrarTab()">Mostrar Tabela de Jogos</button>
+
+    <section id="jogador">
+    <div id="card-jogador">
+
+        <button onclick="revelar()" style="padding:10px 24px; font-size:16px; cursor:pointer;">
+            Revelar
+        </button>
+
+        <img id="foto-jogador" src="" alt="" style="display:none; width:200px;">
+        
+        <p id="p-nome" style="display:none;">
+            🌐 <strong>Nome:</strong> <span id="nome"></span>
+        </p>
+        <p id="p-nascimento" style="display:none;">
+            📅 <strong>Data de Nascimento:</strong> <span id="nascimento"></span>
+        </p>
+        <p id="p-altura" style="display:none;">
+            📏 <strong>Altura:</strong> <span id="altura"></span>
+        </p>
+        <p id="p-posicao" style="display:none;">
+            🏃 <strong>Posição:</strong> <span id="posicao"></span>
+        </p>
+        <p id="p-rank" style="display:none;">
+            🏅 <strong>Rank:</strong> <span id="rank"></span>
+        </p>
+
+    </div>
+</section>
+
+    <script>
+        function MostrarTab(){
+            document.getElementById("tabela").style.display = "block";
+        }
+
+        function revelar(){
+            
+            const foto = document.getElementById("foto-jogador");
+            foto.src = "_vinicius_junior.png";
+            foto.style.display = "block";
+
+            
+            document.getElementById("nome").textContent = "Vinícius José Paixão de Oliveira Júnior";
+            document.getElementById("p-nome").style.display = "block";
+
+            
+            document.getElementById("nascimento").textContent = "12/07/2000 (25 anos)";
+            document.getElementById("p-nascimento").style.display = "block";
+
+            
+            document.getElementById("altura").textContent = "1,76 m";
+            document.getElementById("p-altura").style.display = "block";
+
+            
+            document.getElementById("posicao").textContent = "Ponta-esquerda / Atacante";
+            document.getElementById("p-posicao").style.display = "block";
+
+            
+            document.getElementById("rank").textContent = "9,5";
+            document.getElementById("p-rank").style.display = "block";
+        }
+
+    </script>
+</body>
+</html>
